@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace FlightBooking
 {
-    public partial class cofirmation : Form
+    public partial class confirmation : Form
     {
 
         string MyConnection2 = "server=localhost;database=airlines;uid=root;pwd=;";
         BookObject book;
 
-        public cofirmation()
+        public confirmation()
         {
             InitializeComponent();
             fromLabel.Text = BookObject.FlightDestinationFrom.ToString();
@@ -57,6 +57,11 @@ namespace FlightBooking
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

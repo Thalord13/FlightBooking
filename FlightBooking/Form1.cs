@@ -136,7 +136,7 @@ namespace FlightBooking
             BookObject.FlightDestinationTo = toComboBox.Text;
             BookObject.Fare = "50";
 
-            cofirmation f2 = new cofirmation();
+            confirmation f2 = new confirmation();
             f2.ShowDialog(); // 
 
         }
@@ -352,6 +352,41 @@ namespace FlightBooking
             {
                 MessageBox.Show("There is an error: " + ex.Message);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fromComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
