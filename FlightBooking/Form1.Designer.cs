@@ -36,8 +36,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.last_name = new System.Windows.Forms.TextBox();
+            this.first_name = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -131,8 +131,8 @@
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.last_name);
+            this.tabPage1.Controls.Add(this.first_name);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.textBox2);
@@ -253,19 +253,20 @@
             this.label19.TabIndex = 108;
             this.label19.Text = "Amount";
             // 
-            // textBox4
+            // last_name
             // 
-            this.textBox4.Location = new System.Drawing.Point(58, 198);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(135, 20);
-            this.textBox4.TabIndex = 107;
+            this.last_name.Location = new System.Drawing.Point(58, 198);
+            this.last_name.Name = "last_name";
+            this.last_name.Size = new System.Drawing.Size(135, 20);
+            this.last_name.TabIndex = 107;
+            this.last_name.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox3
+            // first_name
             // 
-            this.textBox3.Location = new System.Drawing.Point(58, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(135, 20);
-            this.textBox3.TabIndex = 106;
+            this.first_name.Location = new System.Drawing.Point(58, 158);
+            this.first_name.Name = "first_name";
+            this.first_name.Size = new System.Drawing.Size(135, 20);
+            this.first_name.TabIndex = 106;
             // 
             // label18
             // 
@@ -1046,8 +1047,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox last_name;
+        private System.Windows.Forms.TextBox first_name;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox2;

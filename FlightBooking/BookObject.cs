@@ -14,6 +14,10 @@ namespace FlightBooking
         public static string FlightDestinationFrom { get; set; }
         public static string FlightDestinationTo { get; set; }
         public static string Fare { get; set; }
+        
+        /*ja*/
+        public static string Firstname { get; set; }
+        public static string Lastname { get; set; }
 
     }
 }

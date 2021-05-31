@@ -25,6 +25,7 @@ namespace FlightBooking
             scheduleLabel.Text = BookObject.FlightSchedule.ToString();
             fareLabel.Text = BookObject.Fare.ToString();
             seatLabel.Text = BookObject.FlightSeat.ToString();
+            //.Text= BookObject.Firstname
         }
 
         private void button2_Click(object sender, EventArgs e)

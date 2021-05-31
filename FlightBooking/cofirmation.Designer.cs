@@ -42,7 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.seatLabel = new System.Windows.Forms.Label();
             this.Name = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.fnLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -186,14 +186,14 @@
             this.Name.TabIndex = 13;
             this.Name.Text = "Name";
             // 
-            // label5
+            // fnLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(86, 180);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "label6";
+            this.fnLabel.AutoSize = true;
+            this.fnLabel.Location = new System.Drawing.Point(86, 180);
+            this.fnLabel.Name = "fnLabel";
+            this.fnLabel.Size = new System.Drawing.Size(35, 13);
+            this.fnLabel.TabIndex = 14;
+            this.fnLabel.Text = "label6";
             // 
             // pictureBox1
             // 
@@ -212,7 +212,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 292);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.fnLabel);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.seatLabel);
             this.Controls.Add(this.label2);
@@ -227,7 +227,7 @@
             this.Controls.Add(this.fromLabel);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
-           // this.Name = "confirmation";
+            this.Name = "confirmation";
             this.Text = "Book Confirmation";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -250,7 +250,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label seatLabel;
         private System.Windows.Forms.Label Name;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label fnLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

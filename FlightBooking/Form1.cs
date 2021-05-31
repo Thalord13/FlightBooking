@@ -136,6 +136,10 @@ namespace FlightBooking
             BookObject.FlightDestinationTo = toComboBox.Text;
             BookObject.Fare = "50";
 
+            /*ja*/
+            BookObject.Firstname = first_name;
+            BookObject.Lastname = last_name;
+
             confirmation f2 = new confirmation();
             f2.ShowDialog(); // 
 
@@ -385,6 +389,11 @@ namespace FlightBooking
         }
 
         private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
