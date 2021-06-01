@@ -137,8 +137,8 @@ namespace FlightBooking
             BookObject.Fare = "50";
 
             /*ja*/
-            BookObject.Firstname = first_name;
-            BookObject.Lastname = last_name;
+            BookObject.Firstname = first_name.Text;
+            BookObject.Lastname = last_name.Text;
 
             confirmation f2 = new confirmation();
             f2.ShowDialog(); // 
@@ -177,47 +177,48 @@ namespace FlightBooking
 
         private void aTwoBtn_Click(object sender, EventArgs e)
         {
-
+            seatNumber = "A2";
         }
 
         private void bTwoBtn_Click(object sender, EventArgs e)
         {
-
+            seatNumber = "B2";
         }
 
         private void cTwoBtn_Click(object sender, EventArgs e)
         {
-
+            seatNumber = "C2";
         }
 
         private void dTwoBtn_Click(object sender, EventArgs e)
         {
+            seatNumber = "D2";
 
         }
 
         private void eTwoBtn_Click(object sender, EventArgs e)
         {
-
+            seatNumber = "E2";
         }
 
         private void fTwoBtn_Click(object sender, EventArgs e)
         {
-
+            seatNumber = "F2";
         }
 
         private void aThreeBtn_Click(object sender, EventArgs e)
         {
-
+            seatNumber = "A3";
         }
 
         private void bThreeBtn_Click(object sender, EventArgs e)
         {
-
+            seatNumber = "B3";
         }
 
         private void cThreeBtn_Click(object sender, EventArgs e)
         {
-
+            seatNumber = "C3";
         }
 
         private void dThreeBtn_Click(object sender, EventArgs e)

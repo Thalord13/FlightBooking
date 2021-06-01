@@ -41,9 +41,10 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.seatLabel = new System.Windows.Forms.Label();
-            this.Name = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.fnLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,15 +177,15 @@
             this.seatLabel.TabIndex = 11;
             this.seatLabel.Text = "Fare";
             // 
-            // Name
+            // label9
             // 
-            this.Name.AutoSize = true;
-            this.Name.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.Name.Location = new System.Drawing.Point(12, 180);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(37, 12);
-            this.Name.TabIndex = 13;
-            this.Name.Text = "Name";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            this.label9.Location = new System.Drawing.Point(12, 180);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 12);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Name";
             // 
             // fnLabel
             // 
@@ -206,14 +207,25 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(18, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(127, 16);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Flight Summary";
+            // 
             // confirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 292);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.fnLabel);
-            this.Controls.Add(this.Name);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.seatLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cancelButton);
@@ -249,8 +261,9 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label seatLabel;
-        private System.Windows.Forms.Label Name;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label fnLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label10;
     }
 }

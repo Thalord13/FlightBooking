@@ -25,12 +25,13 @@ namespace FlightBooking
             scheduleLabel.Text = BookObject.FlightSchedule.ToString();
             fareLabel.Text = BookObject.Fare.ToString();
             seatLabel.Text = BookObject.FlightSeat.ToString();
-            //.Text= BookObject.Firstname
+
+            fnLabel.Text = BookObject.Firstname.ToString() +""+ BookObject.Lastname.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //Form call= new Form();
         }
 
         private void bookButton_Click(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace FlightBooking
             {
                
                 //This is my insert query in which i am taking input from the user through windows forms  
-                string Query = "insert into flightbook(FlightSeat,FlightSchedule,FlightDestinationFrom,FlightDestinationTo,Fare) values('" + BookObject.FlightSeat + "','" + BookObject.FlightSchedule + "','" + BookObject.FlightDestinationFrom + "','" + BookObject.FlightDestinationTo + "','" + BookObject.Fare + "');";
+                string Query = "insert into flightbook(FlightSeat,FlightSchedule,FlightDestinationFrom,FlightDestinationTo,Fare,Flight_) values('" + BookObject.FlightSeat + "','" + BookObject.FlightSchedule + "','" + BookObject.FlightDestinationFrom + "','" + BookObject.FlightDestinationTo + "','" + BookObject.Fare + "');";
                 //This is  MySqlConnection here i have created the object and pass my connection string.  
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 //This is command class which will handle the query and connection object.  
