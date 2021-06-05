@@ -52,7 +52,8 @@ namespace FlightBooking
             {
                 //Display query  
                 // string Query = "select * from flightbook WHERE FlightSchedule ='" + date + "'";
-                string Query = "select * from flightbook";
+                // string Query = "select * from flightbook";
+                string Query = "SELECT * FROM flightbook LEFT OUTER JOIN flightcancel ON flightbook.FlightBookID = flightcancel.FlightBookID WHERE flightcancel.FlightBookID IS NULL";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MyConn2.Open();
@@ -62,6 +63,10 @@ namespace FlightBooking
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
                 dataGridView1.DataSource = dTable;
+                this.dataGridView1.Columns["FlightCancelID"].Visible = false;
+                this.dataGridView1.Columns["FlightBookID1"].Visible = false;
+                this.dataGridView1.Columns["Reason"].Visible = false;
+                this.dataGridView1.Columns["FlightCancelDate"].Visible = false;
                 MyConn2.Close();
 
             }
@@ -402,5 +407,212 @@ namespace FlightBooking
         {
 
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            string theDate = dateTimePicker1.Value.ToShortDateString();
+            bookSeats(theDate);
+        }
+
+        private void bookSeats(string theDate)
+        {
+            try
+            {
+                btnBookDefault();
+                //Display query  
+                string Query = "select * from flightbook WHERE FlightSchedule ='" + theDate + "'";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MyConn2.Open();
+                //For offline connection we weill use  MySqlDataAdapter class.  
+                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MyAdapter.SelectCommand = MyCommand2;
+                DataTable dTable = new DataTable();
+                MyAdapter.Fill(dTable);
+                foreach (DataRow row in dTable.Rows)
+                {
+                    // fromComboBox.Items.Add(row["FlightDestinationTLA"].ToString());
+                    // toComboBox.Items.Add(row["FlightDestinationTLA"].ToString());
+
+                    string seatBook = row["FlightSeat"].ToString();
+
+                    switch (seatBook)
+                    {
+                        case "A1":
+                            aOneBtn.Enabled = false;
+                            break;
+                        case "B1":
+                            bOneBtn.Enabled = false;
+                            break;
+                        case "C1":
+                            cOneBtn.Enabled = false;
+                            break;
+                        case "D1":
+                            dOneBtn.Enabled = false;
+                            break;
+                        case "E1":
+                            eOneBtn.Enabled = false;
+                            break;
+                        case "F1":
+                            fOneBtn.Enabled = false;
+                            break;
+                        case "A2":
+                            aTwoBtn.Enabled = false;
+                            break;
+                        case "B2":
+                            bTwoBtn.Enabled = false;
+                            break;
+                        case "C2":
+                            cTwoBtn.Enabled = false;
+                            break;
+                        case "D2":
+                            dTwoBtn.Enabled = false;
+                            break;
+                        case "E2":
+                            eTwoBtn.Enabled = false;
+                            break;
+                        case "F2":
+                            fTwoBtn.Enabled = false;
+                            break;
+                        case "A3":
+                            aThreeBtn.Enabled = false;
+                            break;
+                        case "B3":
+                            bThreeBtn.Enabled = false;
+                            break;
+                        case "C3":
+                            cThreeBtn.Enabled = false;
+                            break;
+                        case "D3":
+                            dThreeBtn.Enabled = false;
+                            break;
+                        case "E3":
+                            fThreeBtn.Enabled = false;
+                            break;
+                        case "F3":
+                            button14.Enabled = false;
+                            break;
+                        case "A4":
+                            aFourBtn.Enabled = false;
+                            break;
+                        case "B4":
+                            bFourBtn.Enabled = false;
+                            break;
+                        case "C4":
+                            cFourBtn.Enabled = false;
+                            break;
+                        case "D4":
+                            dFourBtn.Enabled = false;
+                            break;
+                        case "E4":
+                            eFourBtn.Enabled = false;
+                            break;
+                        case "F4":
+                            fFourBtn.Enabled = false;
+                            break;
+                        case "A5":
+                            aFiveBtn.Enabled = false;
+                            break;
+                        case "B5":
+                            bFiveBtn.Enabled = false;
+                            break;
+                        case "C5":
+                            cFiveBtn.Enabled = false;
+                            break;
+                        case "D5":
+                            dFiveBtn.Enabled = false;
+                            break;
+                        case "E5":
+                            eFiveBtn.Enabled = false;
+                            break;
+                        case "F5":
+                            fFiveBtn.Enabled = false;
+                            break;
+                        case "A6":
+                            aSixBtn.Enabled = false;
+                            break;
+                        case "B6":
+                            bSixBtn.Enabled = false;
+                            break;
+                        case "C6":
+                            cSixBtn.Enabled = false;
+                            break;
+                        case "D6":
+                            dSixBtn.Enabled = false;
+                            break;
+                        case "E6":
+                            eSixBtn.Enabled = false;
+                            break;
+                        case "F6":
+                            fSixBtn.Enabled = false;
+                            break;
+                        default:
+                            
+                            break;
+                    }
+
+                }
+                MyConn2.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("There is an error: " + e.Message);
+            }
+        }
+
+        private void btnBookDefault()
+        {
+            aOneBtn.Enabled = true;
+            bOneBtn.Enabled = true;
+            cOneBtn.Enabled = true;
+            dOneBtn.Enabled = true;
+            eOneBtn.Enabled = true;
+            fOneBtn.Enabled = true;
+
+            aTwoBtn.Enabled = true;
+            bTwoBtn.Enabled = true;
+            cTwoBtn.Enabled = true;
+            dTwoBtn.Enabled = true;
+            eTwoBtn.Enabled = true;
+            fTwoBtn.Enabled = true;
+
+            aThreeBtn.Enabled = true;
+            bThreeBtn.Enabled = true;
+            cThreeBtn.Enabled = true;
+            dThreeBtn.Enabled = true;
+            fThreeBtn.Enabled = true;
+            button14.Enabled = true;
+
+            aFourBtn.Enabled = true;
+            bFourBtn.Enabled = true;
+            cFourBtn.Enabled = true;
+            dFourBtn.Enabled = true;
+            eFourBtn.Enabled = true;
+            fFourBtn.Enabled = true;
+
+            aFiveBtn.Enabled = true;
+            bFiveBtn.Enabled = true;
+            cFiveBtn.Enabled = true;
+            dFiveBtn.Enabled = true;
+            eFiveBtn.Enabled = true;
+            fFiveBtn.Enabled = true;
+
+            aSixBtn.Enabled = true;
+            bSixBtn.Enabled = true;
+            cSixBtn.Enabled = true;
+            dSixBtn.Enabled = true;
+            eSixBtn.Enabled = true;
+            fSixBtn.Enabled = true;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CancelForm cancelForm = new CancelForm();
+            cancelForm.ShowDialog(); // 
+        }
+
+       
     }
 }

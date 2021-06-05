@@ -24,7 +24,6 @@ C:\Users\ThonyD\Desktop\Programs\cSharp\FlightBooking\FlightBooking\bin\Debug\My
 C:\Users\ThonyD\Desktop\Programs\cSharp\FlightBooking\FlightBooking\bin\Debug\MySql.Web.dll
 C:\Users\ThonyD\Desktop\Programs\cSharp\FlightBooking\FlightBooking\bin\Debug\MySql.Data.EntityFramework.xml
 C:\Users\ThonyD\Desktop\Programs\cSharp\FlightBooking\FlightBooking\bin\Debug\MySql.Web.xml
-C:\Users\ThonyD\Desktop\Programs\cSharp\FlightBooking\FlightBooking\obj\Debug\FlightBooking.cofirmation.resources
 D:\IM_Final Project\IM_PROJ\FlightBooking\FlightBooking\bin\Debug\FlightBooking.exe.config
 D:\IM_Final Project\IM_PROJ\FlightBooking\FlightBooking\bin\Debug\FlightBooking.exe
 D:\IM_Final Project\IM_PROJ\FlightBooking\FlightBooking\bin\Debug\FlightBooking.pdb
@@ -49,3 +48,5 @@ D:\IM_Final Project\IM_PROJ\FlightBooking\FlightBooking\obj\Debug\FlightBooking.
 D:\IM_Final Project\IM_PROJ\FlightBooking\FlightBooking\obj\Debug\FlightBooking.exe
 D:\IM_Final Project\IM_PROJ\FlightBooking\FlightBooking\obj\Debug\FlightBooking.pdb
 D:\IM_Final Project\IM_PROJ\FlightBooking\FlightBooking\obj\Debug\FlightBooking.confirmation.resources
+C:\Users\ThonyD\Desktop\Programs\cSharp\FlightBooking\FlightBooking\obj\Debug\FlightBooking.confirmation.resources
+C:\Users\ThonyD\Desktop\Programs\cSharp\FlightBooking\FlightBooking\obj\Debug\FlightBooking.CancelForm.resources

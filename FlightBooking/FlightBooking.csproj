@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookObject.cs" />
+    <Compile Include="CancelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelForm.Designer.cs">
+      <DependentUpon>CancelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="cofirmation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CancelForm.resx">
+      <DependentUpon>CancelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cofirmation.resx">
       <DependentUpon>cofirmation.cs</DependentUpon>
     </EmbeddedResource>
