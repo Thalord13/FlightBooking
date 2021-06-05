@@ -134,12 +134,16 @@ namespace FlightBooking
             BookObject.FlightSchedule = theDate;
             BookObject.FlightDestinationFrom = fromComboBox.Text;
             BookObject.FlightDestinationTo = toComboBox.Text;
-            BookObject.Fare = "50";
+           // BookObject.Fare = "50";
 
-            /*ja*/
+            /*ja previous( I forgot the date)*/
             BookObject.Firstname = first_name.Text;
             BookObject.Lastname = last_name.Text;
 
+            /*ja modify 6/4/21*/
+            BookObject.Fare_CashAmount = txtbx_cashamount.Text;
+            BookObject.Fare_CardNum = txtbx_cardnum.Text;
+            BookObject.Fare_CardAmount = txtbx_cardamount.Text;
             confirmation f2 = new confirmation();
             f2.ShowDialog(); // 
 

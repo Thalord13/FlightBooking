@@ -34,16 +34,16 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtbx_cardamount = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.last_name = new System.Windows.Forms.TextBox();
             this.first_name = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtbx_cardnum = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbx_cashamount = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -129,16 +129,16 @@
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.txtbx_cardamount);
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.last_name);
             this.tabPage1.Controls.Add(this.first_name);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.txtbx_cardnum);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtbx_cashamount);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
@@ -236,12 +236,12 @@
             this.pictureBox1.TabIndex = 110;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox5
+            // txtbx_cardamount
             // 
-            this.textBox5.Location = new System.Drawing.Point(57, 352);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 20);
-            this.textBox5.TabIndex = 109;
+            this.txtbx_cardamount.Location = new System.Drawing.Point(57, 352);
+            this.txtbx_cardamount.Name = "txtbx_cardamount";
+            this.txtbx_cardamount.Size = new System.Drawing.Size(136, 20);
+            this.txtbx_cardamount.TabIndex = 109;
             // 
             // label19
             // 
@@ -288,12 +288,12 @@
             this.label17.TabIndex = 104;
             this.label17.Text = " First \r\nName";
             // 
-            // textBox2
+            // txtbx_cardnum
             // 
-            this.textBox2.Location = new System.Drawing.Point(58, 317);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 103;
+            this.txtbx_cardnum.Location = new System.Drawing.Point(58, 317);
+            this.txtbx_cardnum.Name = "txtbx_cardnum";
+            this.txtbx_cardnum.Size = new System.Drawing.Size(135, 20);
+            this.txtbx_cardnum.TabIndex = 103;
             // 
             // label16
             // 
@@ -315,12 +315,12 @@
             this.label15.TabIndex = 101;
             this.label15.Text = "or";
             // 
-            // textBox1
+            // txtbx_cashamount
             // 
-            this.textBox1.Location = new System.Drawing.Point(57, 271);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 100;
+            this.txtbx_cashamount.Location = new System.Drawing.Point(57, 271);
+            this.txtbx_cashamount.Name = "txtbx_cashamount";
+            this.txtbx_cashamount.Size = new System.Drawing.Size(136, 20);
+            this.txtbx_cashamount.TabIndex = 100;
             // 
             // label13
             // 
@@ -1043,15 +1043,15 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbx_cashamount;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtbx_cardamount;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox last_name;
         private System.Windows.Forms.TextBox first_name;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtbx_cardnum;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;

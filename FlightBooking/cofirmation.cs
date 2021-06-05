@@ -23,15 +23,29 @@ namespace FlightBooking
             fromLabel.Text = BookObject.FlightDestinationFrom.ToString();
             toLabel.Text = BookObject.FlightDestinationTo.ToString();
             scheduleLabel.Text = BookObject.FlightSchedule.ToString();
-            fareLabel.Text = BookObject.Fare.ToString();
+          //  fareLabel.Text = BookObject.Fare.ToString();
             seatLabel.Text = BookObject.FlightSeat.ToString();
 
-            fnLabel.Text = BookObject.Firstname.ToString() +""+ BookObject.Lastname.ToString();
+            fnLabel.Text = BookObject.Firstname.ToString() +" "+ BookObject.Lastname.ToString();
+            cashamountLabel.Text = BookObject.Fare_CashAmount.ToString();
+            cardnumLabel.Text = BookObject.Fare_CardNum.ToString();
+            cardamountLabel.Text = BookObject.Fare_CardAmount.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             //Form call= new Form();
+            // new Form1().setVisible(true);   
+            /*if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+            else
+            {
+                MessageBox.Show("No entries in back navigation history.");
+            } */
+           /* Form call = new Form();
+            call.Form(); */
         }
 
         private void bookButton_Click(object sender, EventArgs e)
@@ -40,7 +54,7 @@ namespace FlightBooking
             {
                
                 //This is my insert query in which i am taking input from the user through windows forms  
-                string Query = "insert into flightbook(FlightSeat,FlightSchedule,FlightDestinationFrom,FlightDestinationTo,Fare,Flight_) values('" + BookObject.FlightSeat + "','" + BookObject.FlightSchedule + "','" + BookObject.FlightDestinationFrom + "','" + BookObject.FlightDestinationTo + "','" + BookObject.Fare + "');";
+               string Query = "insert into flightbook(FlightSeat,FlightSchedule,FlightDestinationFrom,FlightDestinationTo,Fare,Flight_Lname,Flight_Fname,Flight_CardNum,Fare_CardAmount) values('" + BookObject.FlightSeat + "','" + BookObject.FlightSchedule + "','" + BookObject.FlightDestinationFrom + "','" + BookObject.FlightDestinationTo + "','" + BookObject.Fare_CashAmount + "','" + BookObject.Firstname + "','" + BookObject.Lastname  + "','"+ BookObject.Fare_CardNum + "','"+ BookObject.Fare_CardAmount + "');";
                 //This is  MySqlConnection here i have created the object and pass my connection string.  
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 //This is command class which will handle the query and connection object.  
@@ -59,11 +73,46 @@ namespace FlightBooking
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        } 
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void fareLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void confirmation_Load(object sender, EventArgs e)
+        {
+            fromLabel.Parent = pictureBox1;
+            fromLabel.BackColor = Color.Transparent;
+
+            toLabel.Parent = pictureBox1;
+            toLabel.BackColor = Color.Transparent;
+
+            seatLabel.Parent = pictureBox1;
+            seatLabel.BackColor = Color.Transparent;
+
+            scheduleLabel.Parent = pictureBox1;
+            scheduleLabel.BackColor = Color.Transparent;
+
+            fnLabel.Parent = pictureBox1;
+            fnLabel.BackColor = Color.Transparent;
+
+            cashamountLabel.Parent = pictureBox1;
+            cashamountLabel.BackColor = Color.Transparent;
+
+            cardnumLabel.Parent = pictureBox1;
+            cardnumLabel.BackColor = Color.Transparent;
+
+            cardamountLabel.Parent = pictureBox1;
+            cardamountLabel.BackColor = Color.Transparent;
+
+            flightsummaryLabel.Parent = pictureBox1;
+            flightsummaryLabel.BackColor = Color.Transparent;
         }
     }
 }
