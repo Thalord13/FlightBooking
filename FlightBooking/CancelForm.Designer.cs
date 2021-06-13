@@ -45,47 +45,42 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(121, 21);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(182, 32);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 21);
+            this.comboBox1.Size = new System.Drawing.Size(205, 28);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // flightSchedTxtBox
             // 
             this.flightSchedTxtBox.Enabled = false;
-            this.flightSchedTxtBox.Location = new System.Drawing.Point(121, 79);
-            this.flightSchedTxtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.flightSchedTxtBox.Location = new System.Drawing.Point(182, 122);
             this.flightSchedTxtBox.Name = "flightSchedTxtBox";
-            this.flightSchedTxtBox.Size = new System.Drawing.Size(138, 20);
+            this.flightSchedTxtBox.Size = new System.Drawing.Size(205, 26);
             this.flightSchedTxtBox.TabIndex = 1;
             // 
             // flightSeatTxtBox
             // 
             this.flightSeatTxtBox.Enabled = false;
-            this.flightSeatTxtBox.Location = new System.Drawing.Point(121, 124);
-            this.flightSeatTxtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.flightSeatTxtBox.Location = new System.Drawing.Point(182, 191);
             this.flightSeatTxtBox.Name = "flightSeatTxtBox";
-            this.flightSeatTxtBox.Size = new System.Drawing.Size(138, 20);
+            this.flightSeatTxtBox.Size = new System.Drawing.Size(205, 26);
             this.flightSeatTxtBox.TabIndex = 2;
             // 
             // flightDistTxtBox
             // 
             this.flightDistTxtBox.Enabled = false;
-            this.flightDistTxtBox.Location = new System.Drawing.Point(121, 164);
-            this.flightDistTxtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.flightDistTxtBox.Location = new System.Drawing.Point(182, 252);
             this.flightDistTxtBox.Name = "flightDistTxtBox";
-            this.flightDistTxtBox.Size = new System.Drawing.Size(138, 20);
+            this.flightDistTxtBox.Size = new System.Drawing.Size(205, 26);
             this.flightDistTxtBox.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.button1.Location = new System.Drawing.Point(143, 231);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(214, 355);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 26);
+            this.button1.Size = new System.Drawing.Size(150, 40);
             this.button1.TabIndex = 4;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
@@ -96,10 +91,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Goldenrod;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.label1.Location = new System.Drawing.Point(119, 64);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(178, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 12);
+            this.label1.Size = new System.Drawing.Size(137, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Flight Schedule";
             // 
@@ -108,10 +102,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Goldenrod;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.label2.Location = new System.Drawing.Point(119, 109);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(178, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 12);
+            this.label2.Size = new System.Drawing.Size(97, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Flight Seat";
             // 
@@ -120,10 +113,9 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Goldenrod;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.label3.Location = new System.Drawing.Point(119, 149);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(178, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 12);
+            this.label3.Size = new System.Drawing.Size(154, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Flight Destination";
             // 
@@ -132,19 +124,17 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Goldenrod;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.label4.Location = new System.Drawing.Point(119, 192);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(178, 295);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 12);
+            this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Reason";
             // 
             // reasonTxtBox
             // 
-            this.reasonTxtBox.Location = new System.Drawing.Point(121, 207);
-            this.reasonTxtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.reasonTxtBox.Location = new System.Drawing.Point(182, 318);
             this.reasonTxtBox.Name = "reasonTxtBox";
-            this.reasonTxtBox.Size = new System.Drawing.Size(138, 20);
+            this.reasonTxtBox.Size = new System.Drawing.Size(205, 26);
             this.reasonTxtBox.TabIndex = 8;
             // 
             // label5
@@ -152,21 +142,20 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Goldenrod;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.label5.Location = new System.Drawing.Point(119, 6);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(178, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 12);
+            this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Flight ID";
             // 
             // CancelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(423, 284);
+            this.ClientSize = new System.Drawing.Size(634, 437);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.reasonTxtBox);
@@ -179,8 +168,8 @@
             this.Controls.Add(this.flightSchedTxtBox);
             this.Controls.Add(this.comboBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CancelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CancelForm";
             this.ResumeLayout(false);
             this.PerformLayout();

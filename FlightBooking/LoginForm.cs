@@ -25,26 +25,42 @@ namespace FlightBooking
             Log_in.Username = txtbx_username.Text;
             Log_in.Password = txtbx_password.Text;
 
+            string count = "";
+
             try
             {
+                // string Query = "select username,password from flightuser where = '" + Log_in.Username + "','" + Log_in.Password + "','";
+                string Query = "SELECT COUNT(*) AS login FROM flightuser WHERE username = '" + txtbx_username.Text.ToString() + "' AND password = '" + txtbx_password.Text.ToString() + "'";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MyConn2.Open();
+                //For offline connection we weill use  MySqlDataAdapter class.  
+                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MyAdapter.SelectCommand = MyCommand2;
+                DataTable dTable = new DataTable();
+                MyAdapter.Fill(dTable);
+                foreach (DataRow row in dTable.Rows)
+                {
+                    count = row["login"].ToString();
+                }
 
+                if(count.Equals("1"))
+                {
+                    this.Hide();
+                    Form1 f2 = new Form1();
+                    f2.ShowDialog(); // 
+                    this.Close();
+                } else
+                {
+                    MessageBox.Show("sayop pass hehe");
+                }
+
+                MyConn2.Close();
+                // this.Close();
             }
             catch(Exception ex)
             {
-                string Query = "select username,password from flightuser where = '"+ Log_in.Username + "','" + Log_in.Password + "','" ;
-                //This is  MySqlConnection here i have created the object and pass my connection string.  
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                //This is command class which will handle the query and connection object.  
-                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
-                MySqlDataReader MyReader2;
-                MyConn2.Open();
-                MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
-                MessageBox.Show("Log-in Successfully!");
-                while (MyReader2.Read())
-                {
-                }
-                MyConn2.Close();
-                this.Close();
+                MessageBox.Show("There is an error: " + ex.Message);
             }
         }
     }

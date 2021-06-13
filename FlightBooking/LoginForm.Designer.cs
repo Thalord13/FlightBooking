@@ -38,40 +38,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 72);
+            this.label1.Location = new System.Drawing.Point(99, 111);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 119);
+            this.label2.Location = new System.Drawing.Point(99, 183);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
             // txtbx_username
             // 
-            this.txtbx_username.Location = new System.Drawing.Point(143, 72);
+            this.txtbx_username.Location = new System.Drawing.Point(214, 111);
+            this.txtbx_username.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbx_username.Name = "txtbx_username";
-            this.txtbx_username.Size = new System.Drawing.Size(100, 20);
+            this.txtbx_username.Size = new System.Drawing.Size(148, 26);
             this.txtbx_username.TabIndex = 2;
             // 
             // txtbx_password
             // 
-            this.txtbx_password.Location = new System.Drawing.Point(143, 119);
+            this.txtbx_password.Location = new System.Drawing.Point(214, 183);
+            this.txtbx_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbx_password.Name = "txtbx_password";
-            this.txtbx_password.Size = new System.Drawing.Size(100, 20);
+            this.txtbx_password.PasswordChar = '*';
+            this.txtbx_password.Size = new System.Drawing.Size(148, 26);
             this.txtbx_password.TabIndex = 3;
             // 
             // btn_submit
             // 
-            this.btn_submit.Location = new System.Drawing.Point(155, 168);
+            this.btn_submit.Location = new System.Drawing.Point(232, 258);
+            this.btn_submit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(75, 23);
+            this.btn_submit.Size = new System.Drawing.Size(112, 35);
             this.btn_submit.TabIndex = 4;
             this.btn_submit.Text = "Log-in";
             this.btn_submit.UseVisualStyleBackColor = true;
@@ -79,15 +85,17 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 255);
+            this.ClientSize = new System.Drawing.Size(525, 392);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.txtbx_password);
             this.Controls.Add(this.txtbx_username);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.ResumeLayout(false);
             this.PerformLayout();

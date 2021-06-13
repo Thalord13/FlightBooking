@@ -66,6 +66,9 @@ namespace FlightBooking
                 {
                 }
                 MyConn2.Close();
+                this.Hide();
+                Form1 f1 = new Form1();
+                f1.ShowDialog(); // 
                 this.Close();
             }
             catch (Exception ex)

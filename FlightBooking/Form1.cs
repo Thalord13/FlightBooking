@@ -156,8 +156,11 @@ namespace FlightBooking
             BookObject.Fare_CashAmount = txtbx_cashamount.Text;
             BookObject.Fare_CardNum = txtbx_cardnum.Text;
             BookObject.Fare_CardAmount = txtbx_cardamount.Text;
+
+            this.Hide();
             confirmation f2 = new confirmation();
             f2.ShowDialog(); // 
+            this.Close();
 
         }
 
@@ -617,8 +620,10 @@ namespace FlightBooking
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             CancelForm cancelForm = new CancelForm();
             cancelForm.ShowDialog(); // 
+            this.Close();
         }
 
         private void availableView_Click(object sender, EventArgs e)

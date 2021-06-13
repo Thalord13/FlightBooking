@@ -46,6 +46,9 @@ namespace FlightBooking
             } */
             /* Form call = new Form();
              call.Form(); */
+            this.Hide();
+            Form1 f2 = new Form1();
+            f2.ShowDialog(); // 
             this.Close();
         }
 
@@ -68,7 +71,13 @@ namespace FlightBooking
                 {
                 }
                 MyConn2.Close();
+                // this.Close();
+
+                this.Hide();
+                Form1 f2 = new Form1();
+                f2.ShowDialog(); // 
                 this.Close();
+
             }
             catch (Exception ex)
             {
