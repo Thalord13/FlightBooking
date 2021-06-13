@@ -75,6 +75,8 @@ namespace FlightBooking
                 MessageBox.Show("There is an error: " + e.Message);
             }
 
+            
+            /*
             try
             {
                 //Display query  
@@ -104,6 +106,11 @@ namespace FlightBooking
 
             viewComboBox.Items.Add("Book");
             viewComboBox.Items.Add("Destination");
+            */
+            
+
+            counterBook(date);
+            bookSeats(date);
 
         }
 
@@ -342,7 +349,7 @@ namespace FlightBooking
             {
                 if (viewComboBox.Text.Equals("Book"))
                 {
-                    Query = "select * from flightbook";
+                    Query = "SELECT * FROM flightbook LEFT OUTER JOIN flightcancel ON flightbook.FlightBookID = flightcancel.FlightBookID WHERE flightcancel.FlightBookID IS NULL";
                 }
                 else
                 {
@@ -412,6 +419,7 @@ namespace FlightBooking
         {
             string theDate = dateTimePicker1.Value.ToShortDateString();
             bookSeats(theDate);
+            counterBook(theDate);
         }
 
         private void bookSeats(string theDate)
@@ -613,6 +621,52 @@ namespace FlightBooking
             cancelForm.ShowDialog(); // 
         }
 
-       
+        private void availableView_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bookView_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void counterBook(string date)
+        {
+
+            // var dateAndTime = DateTime.Now;
+            // var date = dateAndTime.ToString("M/dd/yyyy");
+
+            try
+            {
+                //Display query  
+                string Query = "SELECT COUNT(*) AS books FROM flightbook WHERE FlightSchedule ='" + date + "'";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MyConn2.Open();
+                //For offline connection we weill use  MySqlDataAdapter class.  
+                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MyAdapter.SelectCommand = MyCommand2;
+                DataTable dTable = new DataTable();
+                MyAdapter.Fill(dTable);
+                foreach (DataRow row in dTable.Rows)
+                {
+                    bookView.Text = row["books"].ToString();
+                    string total = row["books"].ToString();
+                    int available = 36 - Int32.Parse(total);
+                    availableView.Text = available.ToString();
+                }
+                MyConn2.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("There is an error: " + e.Message);
+            }
+
+            viewComboBox.Items.Add("Book");
+            viewComboBox.Items.Add("Destination");
+        }
+
     }
 }

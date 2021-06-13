@@ -44,8 +44,9 @@ namespace FlightBooking
             {
                 MessageBox.Show("No entries in back navigation history.");
             } */
-           /* Form call = new Form();
-            call.Form(); */
+            /* Form call = new Form();
+             call.Form(); */
+            this.Close();
         }
 
         private void bookButton_Click(object sender, EventArgs e)
