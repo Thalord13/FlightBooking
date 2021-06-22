@@ -52,7 +52,7 @@ namespace FlightBooking
                     this.Close();
                 } else
                 {
-                    MessageBox.Show("sayop pass hehe");
+                    MessageBox.Show("Invalid Password!");
                 }
 
                 MyConn2.Close();

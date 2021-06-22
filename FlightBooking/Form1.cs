@@ -431,7 +431,8 @@ namespace FlightBooking
             {
                 btnBookDefault();
                 //Display query  
-                string Query = "select * from flightbook WHERE FlightSchedule ='" + theDate + "'";
+                // string Query = "select * from flightbook WHERE FlightSchedule ='" + theDate + "'";
+                string Query = "SELECT * FROM flightbook LEFT OUTER JOIN flightcancel ON flightbook.FlightBookID = flightcancel.FlightBookID WHERE flightcancel.FlightBookID IS NULL AND flightbook.FlightSchedule ='" + theDate + "'";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MyConn2.Open();
@@ -645,7 +646,8 @@ namespace FlightBooking
             try
             {
                 //Display query  
-                string Query = "SELECT COUNT(*) AS books FROM flightbook WHERE FlightSchedule ='" + date + "'";
+                // string Query = "SELECT COUNT(*) AS books FROM flightbook WHERE FlightSchedule ='" + date + "'";
+                string Query = "SELECT COUNT(*) AS books FROM flightbook LEFT OUTER JOIN flightcancel ON flightbook.FlightBookID = flightcancel.FlightBookID WHERE flightcancel.FlightBookID IS NULL AND flightbook.FlightSchedule ='" + date + "'";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MyConn2.Open();

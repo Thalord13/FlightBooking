@@ -24,7 +24,8 @@ namespace FlightBooking
             try
             {
                 //Display query  
-                string Query = "select FlightBookID FROM flightbook  WHERE FlightSchedule >= '" + date + "'";
+                // string Query = "select FlightBookID FROM flightbook  WHERE FlightSchedule >= '" + date + "'";
+                string Query = "SELECT flightbook.FlightBookID FROM flightbook LEFT OUTER JOIN flightcancel ON flightbook.FlightBookID = flightcancel.FlightBookID WHERE flightcancel.FlightBookID IS NULL";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MyConn2.Open();

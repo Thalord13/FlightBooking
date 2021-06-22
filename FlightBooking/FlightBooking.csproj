@@ -92,11 +92,17 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -123,6 +129,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="pics_bg\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics_bg\Accept-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics_bg\Very-Basic-Ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics_bg\Arrow-Back-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics_bg\Travel-Airplane-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
